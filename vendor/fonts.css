@@ -4,3 +4,10 @@
     src: url(./fonts/poppins_700.woff2);
     font-weight: 700;    
 }
+
+@font-face {
+    font-family: Poppins;
+    src: url(./fonts/poppins_500.woff);
+    src: url(./fonts/poppins_500.woff2);
+    font-weight: 500;    
+}
