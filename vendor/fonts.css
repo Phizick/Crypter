@@ -11,3 +11,17 @@
     src: url(./fonts/poppins_500.woff2);
     font-weight: 500;    
 }
+
+@font-face {
+    font-family: Poppins;
+    src: url(./fonts/poppins_600.woff);
+    src: url(./fonts/poppins_600.woff2);
+    font-weight: 600;    
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(./fonts/poppins_300.woff);
+    src: url(./fonts/poppins_300.woff2);
+    font-weight: 300;    
+}

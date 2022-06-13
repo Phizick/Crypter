@@ -5,12 +5,13 @@
     justify-content: space-between;
     max-width: 75%;
     margin-top: 128px;
+    margin-bottom: 128px;
 }
 
 .content__image-item {
     max-width: 650px;
     max-height: 800px;
-    border-radius: 20px;
+    border-radius: 12px;
 }
 
 .content__info {
@@ -79,7 +80,7 @@
 }
 
 .content__price-img {
-    background-color: green;
+    background-color: #45B26B;
     border-radius: 50%;
     margin-right: 8px;
     width: 40px;
@@ -163,13 +164,14 @@
     padding-top: 8px;
     display: flex;
     justify-content: space-between;
-    width: inherit;    
+    width: inherit; 
+    width: 225px;
+    margin: 0 auto;   
 }
 
 .content__count-item {
     display: flex;
-    flex-direction: column; 
-    width: 231px;
+    flex-direction: column;     
     margin-bottom: 32px; 
 }
 
@@ -179,6 +181,7 @@
     line-height: 40px;
     text-align: center;
     margin: 0;
+    
 }
 
 .content__count-name {
@@ -187,6 +190,8 @@
     text-align: center;
     line-height: 24px;
     margin: 0;
+    color: var(--grayN);
+
 }
 
 .content__info-button-blue {
@@ -194,6 +199,10 @@
     color: var(--back);
     border: none;
     width: 352px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    height: 48px;
 }
 
 .content__info-button {
@@ -201,6 +210,10 @@
     color: var(--black);
     width: 352px;
     margin-top: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    height: 48px;
 }
 
 .content__info-nav-button-right {
@@ -228,4 +241,23 @@
 
 .content__info-nav-button-left:hover {
     border: 2px solid #E6E8EC;
+}
+
+.gallery__creators-button {
+    border: 2px solid #E6E8EC;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    width: 158px;
+    height: 40px;
+    padding: 0 16px;
+}
+
+.gallery__creators-button-arrow {
+    height: 16px;
+    width: 16px;
 }
