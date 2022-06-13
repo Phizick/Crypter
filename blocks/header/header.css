@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid var(--grayN);
+    border-bottom: 1px solid rgba(119,126,144,.2);
 }
 
 .header__nav {
