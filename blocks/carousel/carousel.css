@@ -73,7 +73,7 @@
 
 .carousel__item-header {
     padding-bottom: 24px;
-    border-bottom: 1px solid rgba(20,20,20,.5);
+    border-bottom: 1px solid rgba(119,126,144,.2);
     margin: 24px 24px 0 24px;
     display: flex;
     justify-content: space-between;
@@ -181,3 +181,20 @@
     margin: 0;
 }
 
+.coloring {
+    background-color: #EF466F;
+}
+
+.colorye {
+    background-color: yellowgreen;
+}
+
+
+
+.carousel__profile:hover {
+    transition:  .5s;
+    transform: scale(1.4);
+    padding-bottom: 20px;
+    padding-top: 10px;
+    
+}
