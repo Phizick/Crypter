@@ -3,6 +3,7 @@
     padding: 128px 160px;
     display: flex;
     flex-direction: column;
+    background-color: #F4F5F6;
 }
 
 .hotcollections__header {
