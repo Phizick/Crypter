@@ -50,11 +50,36 @@
     border-radius: 16px;
     overflow: hidden;
     position: relative;
+    
+    
+
 }
 
 .hotbid__card-img {
     width: 100%;
+    height: 100%;
     transition: transform 1s;
+    
+}
+
+/* .hotbid__item-card::before {
+    content: "";   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(42,44,47,0);
+    transition: all 2s;
+    
+}
+
+.hotbid__item-card:hover::before {
+    background-color: rgba(42,44,47,.4);    
+} */
+
+.hotbid__card-img:hover {
+    transform: scale(1.1);
 }
 
 .hotnbid__card-btns {
