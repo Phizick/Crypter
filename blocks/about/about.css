@@ -1,0 +1,32 @@
+.about {
+    margin: 0 auto;
+}
+
+.about__subtitle {
+    padding: 120px 0 8px 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    color: var(--grayN)
+}
+
+.about__title {
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    padding: 8px 0 24px 0;
+    margin: 0;
+}
+
+.about__button {
+    border: 2px solid #E6E8EC;
+    color: var(--black);
+    width: 182px;
+    display: block;
+    margin: 0 auto;
+  
+}
