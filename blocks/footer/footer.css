@@ -1,0 +1,120 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 160px 0 160px;
+    border-top: 1px solid rgba(119,126,144,.2);
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(119,126,144,.2);
+    padding-bottom: 48px;
+}
+.footer__header {
+    max-width: 352px;
+    width: 100%;
+}
+
+.footer__logo {
+    width: 126px;    
+}
+
+.footer__header-title {
+    margin: 0;
+    padding-top: 32px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    width: 60%;
+}
+
+.footer__connect-nav {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+}
+.footer__info-nav {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-bottom: 40px;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.footer__nav-item {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--grayN);
+    text-decoration: none;
+}
+
+.footer__nav-item:not(:first-child) {
+    margin-top: 24px;
+}
+
+.footer__join-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
+    padding-bottom: 24px;
+    max-width: 352px;
+}
+
+.footer__email-input {
+    width: 352px;
+    height: 48px;
+    border: 2px solid var(--grayN);
+    border-radius: 90px;
+    padding-left: 20px;
+
+}
+
+.footer__copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+.footer__copyright-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    color: var(--grayN);
+}
+
+.footer__copyright-cookies {
+    display: flex;
+
+}
+
+.footer__cookies-text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.footer__cookies-btn {
+    border: none;
+    margin-left: 16px;
+    font-size: 12px;
+    color: var(--blue);
+    font-weight: 600;
+    line-height: 20px;
+    background-color: transparent;
+    height: fit-content;
+    align-self: center;
+}
+
+
