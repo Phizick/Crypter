@@ -80,7 +80,6 @@
     margin-top: 8px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 100%;
 }
 
@@ -102,6 +101,7 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 500;
+    margin-right: auto;
 }
 
 .hotcollections__info-about {
@@ -113,4 +113,5 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    padding: 2px 5px;
 }

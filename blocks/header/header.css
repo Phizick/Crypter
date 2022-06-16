@@ -9,10 +9,8 @@
     top: 0;    
     box-sizing: border-box;
     background-color: var(--back);
-    z-index: 100;
-    
+    z-index: 100;    
 }
-
 
 .header__nav {
     display: flex;
@@ -74,10 +72,24 @@
     color: var(--back);
     border: none;
     width: 80px;
+    transition: .5s;
+}
+
+.header__upload:hover {
+    cursor: pointer;
+    filter: saturate(5);
 }
 
 .header__connect {
     border: 2px solid #E6E8EC;
     color: var(--black);
     width: 137px;
+    transition: .2s;
+}
+
+.header__connect:hover {
+    background-color: var(--blue);
+    color: var(--back);
+    border: none;
+    cursor: pointer;
 }

@@ -27,6 +27,13 @@
     color: var(--black);
     width: 182px;
     display: block;
-    margin: 0 auto;
-  
+    margin: 0 auto;  
+    transition: .2s;
+}
+
+.about__button:hover {
+    background-color: var(--blue);
+    color: var(--back);
+    border: none;
+    cursor: pointer;
 }

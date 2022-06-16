@@ -180,15 +180,22 @@
     line-height: 24px;
 }
 
-.gallery__list-item-dib-button {
+.gallery__list-item-bid-button {
     height: 32px;
-    width: 98px;
+    width: 110px;
     border-radius: 90px;
     border: 2px solid #E6E8EC;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     font-family: Poppins, Arial, sans-serif;
+    transition: .2s;
+}
+.gallery__list-item-bid-button:hover {
+    background-color: var(--blue);
+    color: var(--back);
+    border: none;
+    cursor: pointer;
 }
 
 .gallery__creators {
@@ -289,6 +296,13 @@
     width: 158px;
     height: 40px;
     padding: 0 16px;
+    transition: .2s;
+}
+
+
+.gallery__creators-button:hover {
+    filter:saturate(15);
+    cursor: pointer;
 }
 
 .gallery__creators-button-arrow {

@@ -68,7 +68,8 @@
 }
 
 .hotbid__card-like {
-    background: white url(../../images/heart_disabled.svg) center no-repeat;
+    background: var(--back) url(../../images/heart_disabled.svg) center no-repeat;
+    /* background: var(--back) url(../../images/heart_active.svg) center no-repeat; */
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -80,6 +81,11 @@
     border: none;
     align-items: center;
 }
+
+/* .hotbid__card-like_active {
+    background: var(--back) url(../../images/heart_active.svg) center no-repeat;
+} */
+
 
 .hotbid__card-splash {
     display: flex;
@@ -142,6 +148,7 @@
     transform: translateY(45%);
 }
 
+
 .hotnbid__card-btns {
     position: absolute;
     top: 0;
@@ -155,15 +162,12 @@
     transition: all .3s;
 }
 
-
-
-
-
 .hotbid__card-about {
     display: flex;
     flex-direction: row;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(119,126,144,.2);
+    justify-content: space-between;
     
 }
 
