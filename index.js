@@ -1,32 +1,32 @@
-let slider = document.querySelector('.slider'),
-  sliderList = slider.querySelector('.slider-list'),
-  sliderTrack = slider.querySelector('.slider-track'),
-  slides = slider.querySelectorAll('.slide'),
-  arrows = slider.querySelector('.content__info-nav'),
-  prev = arrows.children[0],
-  next = arrows.children[1],
-  slideWidth = slides[0].offsetWidth,
-  slideIndex = 0,
-  posInit = 0,
-  posX1 = 0,
-  posX2 = 0,
-  posY1 = 0,
-  posY2 = 0,
-  posFinal = 0,
-  isSwipe = false,
-  isScroll = false,
-  allowSwipe = true,
-  transition = true,
-  nextTrf = 0,
-  prevTrf = 0,
-  lastTrf = --slides.length * slideWidth,
-  posThreshold = slides[0].offsetWidth * 0.35,
-  trfRegExp = /([-0-9.]+(?=px))/,
-  swipeStartTime,
-  swipeEndTime,
+let slider = document.querySelector('.slider');
+  sliderList = slider.querySelector('.slider-list');
+  sliderTrack = slider.querySelector('.slider-track');
+  slides = slider.querySelectorAll('.slide');
+  arrows = slider.querySelector('.content__info-nav');
+  prev = arrows.children[0];
+  next = arrows.children[1];
+  slideWidth = slides[0].offsetWidth;
+  slideIndex = 0;
+  posInit = 0;
+  posX1 = 0;
+  posX2 = 0;
+  posY1 = 0;
+  posY2 = 0;
+  posFinal = 0;
+  isSwipe = false;
+  isScroll = false;
+  allowSwipe = true;
+  transition = true;
+  nextTrf = 0;
+  prevTrf = 0;
+  lastTrf = --slides.length * slideWidth;
+  posThreshold = slides[0].offsetWidth * 0.35;
+  trfRegExp = /([-0-9.]+(?=px))/;
+  swipeStartTime;
+  swipeEndTime;
 
   getEvent = () => (event.type.search("touch") !== -1 ? event.touches[0] : event);
-  
+
   slide = function() {
     if (transition) {
       sliderTrack.style.transition = 'transform .5s';
@@ -35,7 +35,7 @@ let slider = document.querySelector('.slider'),
 
     prev.classList.toggle('disabled', slideIndex === 0);
     next.classList.toggle('disabled', slideIndex === --slides.length);
-  },
+  };
   swipeStart = function() {
     let evt = getEvent();
 
@@ -61,11 +61,11 @@ let slider = document.querySelector('.slider'),
       sliderList.classList.remove('grab');
       sliderList.classList.add('grabbing');
     }
-  },
+  };
   swipeAction = function() {
 
-    let evt = getEvent(),
-      style = sliderTrack.style.transform,
+    let evt = getEvent();
+      style = sliderTrack.style.transform;
       transform = +style.match(trfRegExp)[0];
 
     posX2 = posX1 - evt.clientX;
@@ -112,7 +112,7 @@ let slider = document.querySelector('.slider'),
       sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
     }
 
-  },
+  };
   swipeEnd = function() {
     posFinal = posInit - posX1;
 
@@ -156,7 +156,7 @@ let slider = document.querySelector('.slider'),
       }
     }
     allowSwipe = false;
-  },
+  };
   reachEdge = function() {
     transition = false;
     swipeEnd();

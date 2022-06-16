@@ -233,7 +233,7 @@
 }
 
 .content__info-nav-button-right {
-    background: url(../../images/arrow_right.svg) center no-repeat;
+    background: var(--back) url(../../images/arrow_right.svg) center no-repeat;
     border: none;
     border-radius: 40px;
     width: 40px;
@@ -248,7 +248,7 @@
 
 
 .content__info-nav-button-left {
-    background: url(../../images/arrow_left.svg) center no-repeat;
+    background: var(--back) url(../../images/arrow_left.svg) center no-repeat;
     border: none;
     border-radius: 40px;
     width: 40px;
@@ -300,7 +300,8 @@
 .content__info-nav {
     position: absolute;
     bottom: 50px;
-    right: 310px;
+    right: 390px;
+    
 
 }
 

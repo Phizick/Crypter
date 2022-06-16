@@ -2,6 +2,6 @@
     font-family: Poppins, Arial, sans-serif;
     color: var(--black);
     background: var(--back);
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
 }
