@@ -49,7 +49,7 @@
 }
 
 .carousel__container {
-    margin-top: 64px;
+    margin: 0 45px;
     display: flex; 
     gap: 32px;   
 }
@@ -221,3 +221,15 @@
     text-transform: uppercase;
     color: #B1B5C3;
 }
+
+.carousel__wrap {
+    position: relative;
+}
+
+.carousel__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 64px;
+}
+

@@ -22,8 +22,7 @@ let slider = document.querySelector('.slider');
   lastTrf = --slides.length * slideWidth;
   posThreshold = slides[0].offsetWidth * 0.35;
   trfRegExp = /([-0-9.]+(?=px))/;
-  swipeStartTime;
-  swipeEndTime;
+  
 
   getEvent = () => (event.type.search("touch") !== -1 ? event.touches[0] : event);
 
@@ -41,23 +40,17 @@ let slider = document.querySelector('.slider');
 
     if (allowSwipe) {
 
-      swipeStartTime = Date.now();
-      
+      swipeStartTime = Date.now();     
       transition = true;
-
       nextTrf = (slideIndex + 1) * -slideWidth;
       prevTrf = (slideIndex - 1) * -slideWidth;
-
       posInit = posX1 = evt.clientX;
       posY1 = evt.clientY;
-
       sliderTrack.style.transition = '';
-
       document.addEventListener('touchmove', swipeAction);
       document.addEventListener('mousemove', swipeAction);
       document.addEventListener('touchend', swipeEnd);
       document.addEventListener('mouseup', swipeEnd);
-
       sliderList.classList.remove('grab');
       sliderList.classList.add('grabbing');
     }
