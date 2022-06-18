@@ -7,6 +7,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "art",
     },
     {
         link: "./images/gallery/img 109.jpg",
@@ -16,6 +17,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "art",
     },
     {
         link: "./images/gallery/img 108.jpg",
@@ -25,6 +27,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "game",
     },
     {
         link: "./images/gallery/img 110.jpg",
@@ -34,6 +37,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "game",
     },
     {
         link: "./images/gallery/img 101.png",
@@ -43,6 +47,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "art",
     },
     {
         link: "./images/gallery/img 103.png",
@@ -52,6 +57,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "music",
     },
     {
         link: "./images/gallery/img 126.jpg",
@@ -61,6 +67,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "music",
     },
     {
         link: "./images/gallery/img 127.jpg",
@@ -70,6 +77,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "video",
     },
     {
         link: "./images/gallery/img 115.png",
@@ -79,6 +87,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "video",
     },
     {
         link: "./images/gallery/img 114.png",
@@ -88,6 +97,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "photography",
     },
     {
         link: "./images/gallery/img 133.png",
@@ -97,6 +107,7 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "photography",
     },
     {
         link: "./images/gallery/img 120.jpg",
@@ -106,5 +117,6 @@ const discoverCards = [
         price: "2.45",
         priceInfo: "3 in stock",
         cardBid: "0.085 ETH",
+        prop: "photography",
     },
 ];

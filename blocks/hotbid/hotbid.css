@@ -132,6 +132,7 @@
 .hotbid__card-img:hover {
     opacity: .6;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .hotbid__item-card:hover .hotbid__card-like{

@@ -84,6 +84,23 @@
 
 }
 
+
+.discover__list-container {
+    list-style-type: none;
+    color: var(--grayN);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 100px; 
+}
+
 .discover__nav-item:hover {
     cursor: pointer;
     color: var(--black);
@@ -100,10 +117,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;  
-    
+    width: 100px;
     padding: 6px 12px;
     cursor: pointer;
-    border-radius: 100px; 
+    border-radius: 100px;
+    border: none;
+    
+    
     
 }
 
