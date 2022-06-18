@@ -72,13 +72,13 @@ function showItem() {
     });
 
     itemsContainer.forEach(item => {
-        item.classList.remove('card__shattered');
+        item.classList.remove('item__sortable');
             
         if (filterArr.includes(item.dataset.tier) == false) {
-			 item.classList.add("card__shattered");
+			 item.classList.add("item__sortable");
         }
         if (filterArr.includes('all items')) {
-            item.classList.remove('card__shattered');
+            item.classList.remove('item__sortable');
         }	
     });
 }

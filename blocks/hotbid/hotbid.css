@@ -292,3 +292,23 @@
 .hotbid__bid-span {
     margin-right: 5px;
 }
+
+@keyframes sortableElement {
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.item__sortable {
+	opacity: 0;
+	visibility: hidden;
+	animation-name: sortableElement;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+	display: none;
+}
