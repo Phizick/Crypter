@@ -45,35 +45,15 @@ function renderCardHotbid(cardLink, cardSplash, cardName, cardAvatar, cardPrice,
     hotbidList.prepend(createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid));
 };
 
-// const discoverBtns = document.querySelector('.discover__nav-list');
-// allItems = discoverBtns.children[0];
-// art = discoverBtns.children[1];
-// game = discoverBtns.children[2];
-// photo = discoverBtns.children[3];
-// music = discoverBtns.children[4];
-// video = discoverBtns.children[5];
-
-
-// allItems.addEventListener('click', () => {
-//     allItems.classList.add('discover__nav-item-enabled');
-//     allItems.classList.remove('discover__nav-item');
-//     art.classList.remove('discover__nav-item-enabled');
-
-// });
-
 const btnsArray = document.querySelectorAll('.dis');
 
 btnsArray.forEach((item) => {
-    this.addEventListener('click', () => {
-        if (item.classList.contains('discover__nav-item')) {
-            this.classList.add('discover__nav-item-enabled')
-            this.classList.remove('discover__nav-item');
-        // } else {
-        //     item.classList.remove('discover__nav-item')
-        //     item.classList.add('discover__nav-item-enabled');
-        // }
-
-    }})
+    item.addEventListener('click', () => {
+        btnsArray.forEach((item) => {
+            item.classList.remove('dis_active');
+        })
+        item.classList.toggle('dis_active');
+})
 })
 
 
