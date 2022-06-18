@@ -47,6 +47,7 @@
     font-weight: 700;
     line-height: 16px;
     width: fit-content;
+    transition: .4s;
     
 }
 
@@ -93,4 +94,25 @@
 
 }
 
+.discover__nav-item:hover {
+    cursor: pointer;
+    color: var(--black);
+}
+
+.discover__nav-item-enabled {
+    background: #353945;
+    color: var(--back);
+    border-radius: 100px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    transition: .4s;
+    cursor: pointer;
+}
 

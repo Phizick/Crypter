@@ -2,8 +2,9 @@
     margin: 0 auto;
     margin-bottom: 128px;
     box-sizing: border-box;
-    display: flex;  
-    width: 85%;  
+    display: flex; 
+    justify-content: center;
+      
 }
 
 .gallery__full-size {
