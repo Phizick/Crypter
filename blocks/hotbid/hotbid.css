@@ -248,6 +248,8 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
+    justify-content: right;
+    display: flex;
 }
 
 .hotbid__card-footer {
@@ -284,4 +286,8 @@
 .hotbid__card-footer-name {
     display: flex;
     flex-direction: row;
+}
+
+.hotbid__bid-span {
+    margin-right: 5px;
 }

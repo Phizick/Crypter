@@ -12,3 +12,22 @@
 @import url(./blocks/discover/discover.css);
 @import url(./blocks/cubes/cubes.css);
 @import url(./blocks/footer/footer.css);
+
+.carousel__track {
+    display: flex;
+}
+
+.carousel__slider {
+    display: glex;
+    position: relative;
+    flex-direction: row;   
+}
+
+.carousel-slider-list  {
+    overflow: hidden;
+    width: 1250px;
+}
+
+.carousel__list-item:hover .carousel-slider-list {
+    width: 1300px;
+}

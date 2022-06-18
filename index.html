@@ -318,9 +318,10 @@
                     </div>
                 </div>
                 <div class="carousel__content">
-                <button class="content__info-nav-button-left"></button>
+                <button class="content__info-nav-button-left" id="btn-carousel-prev"></button>
                 <div class="carousel__container">
                     <ul class="carousel__list">
+                        <div class="list__tile">
                         <li class="carousel__list-item">
                             <div class="carousel__item-header">
                                 <div class="carousel__header-label">
@@ -345,6 +346,8 @@
                                 <p class="carousel__profile-bid"><strong>2.456</strong> ETH</p>
                             </div>
                         </li>
+                    </div>
+                        <div class="list__tile">
 
                         <li class="carousel__list-item">
                             <div class="carousel__item-header">
@@ -370,6 +373,8 @@
                                 <p class="carousel__profile-bid"><strong>2.456</strong> ETH</p>
                             </div>
                         </li>
+                    </div>
+                    <div class="list__tile">
 
                         <li class="carousel__list-item">
                             <div class="carousel__item-header">
@@ -395,7 +400,8 @@
                                 <p class="carousel__profile-bid"><strong>2.456</strong> ETH</p>
                             </div>
                         </li>
-
+                            </div>
+                            <div class="list__tile">
                         <li class="carousel__list-item">
                             <div class="carousel__item-header">
                                 <div class="carousel__header-label">
@@ -420,7 +426,8 @@
                                 <p class="carousel__profile-bid"><strong>2.456</strong> ETH</p>
                             </div>
                         </li>
-
+                    </div>
+                        <div class="list__tile">
                         <li class="carousel__list-item">
                             <div class="carousel__item-header">
                                 <div class="carousel__header-label">
@@ -445,9 +452,10 @@
                                 <p class="carousel__profile-bid"><strong>2.456</strong> ETH</p>
                             </div>
                         </li>
+                    </div>
                     </ul>
                 </div>
-                <button class="content__info-nav-button-right"></button>
+                <button class="content__info-nav-button-right" id="btn-carousel-next"></button>
             </div>
             </section>
 
@@ -460,8 +468,9 @@
                     </div>
                 </div>
                 <div class="hotbid__content">
-                    <ul class="hotbid__list">
-                        <li class="hotbid__list-item">
+                    <ul class="hotbid__list" id="hotbidList">
+                        <template class="discover__template">
+                            <li class="hotbid__list-item">
                             <div class="hotbid__item-card">
                                 <div class="hotbid__card-back">
                                     <img src="./images/gallery/img 107.jpg" alt="" class="hotbid__card-img" />
@@ -487,147 +496,22 @@
                                         </div>
                                     </div>
                                     <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
+                                        <div class="hotbid__card-price-bid"><span class="hotbid__bid-span">2.45</span> ETH</div>
                                         <p class="hotbid__card-items-info">3 in stock</p>
                                     </div>
                                 </div>
                                 <div class="hotbid__card-footer">
                                     <div class="hotbid__card-footer-name">
                                         <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.085 ETH</strong></p>
+                                        <p class="hotbid__footer-about">Highest bid <span class="hotbid__span">0.085 ETH</span></p>
                                     </div>
                                     <div class="hotbid__footer-new">
                                         New bid 🔥
                                     </div>
                                 </div>
                             </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 108.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.071 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 109.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.801 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 110.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.801 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        </template>                       
                     </ul>
                 </div>
             </section>
@@ -786,7 +670,8 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="hotbid__list discover__edition">
+                    <ul class="hotbid__list discover__edition" id="discoverList">
+                        <template class="discover__template">
                         <li class="hotbid__list-item">
                             <div class="hotbid__item-card">
                                 <div class="hotbid__card-back">
@@ -813,14 +698,14 @@
                                         </div>
                                     </div>
                                     <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
+                                        <div class="hotbid__card-price-bid"><span class="hotbid__bid-span">2.45</span> ETH</div>
                                         <p class="hotbid__card-items-info">3 in stock</p>
                                     </div>
                                 </div>
                                 <div class="hotbid__card-footer">
                                     <div class="hotbid__card-footer-name">
                                         <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.085 ETH</strong></p>
+                                        <p class="hotbid__footer-about">Highest bid <span class="hotbid__span">0.085 ETH</strong></p>
                                     </div>
                                     <div class="hotbid__footer-new">
                                         New bid 🔥
@@ -828,301 +713,8 @@
                                 </div>
                             </div>
                         </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 109.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.071 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 108.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.801 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 110.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.801 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 101.png" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.085 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 103.png" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.071 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 126.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.801 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="hotbid__list-item">
-                            <div class="hotbid__item-card">
-                                <div class="hotbid__card-back">
-                                    <img src="./images/gallery/img 127.jpg" alt="" class="hotbid__card-img" />
-                                </div>
-                                <div class="hotbid__card-splash">Amazing!</div>
-
-                                <button class="hotbid__card-like"></button>
-                                <a href="" class="hotbid__card-bid-link">Place a bid</a>
-                            </div>
-                            <div class="hotbid__card-info">
-                                <div class="hotbid__card-about">
-                                    <div class="hotbid__card-container">
-                                        <p class="hotbid__container-name">Amazing javascript rly</p>
-                                        <div class="hotbid__container-imgs">
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                            <div class="hotbid__container-avatar">
-                                                <img src="./images/profile_1.png" alt="" class="hotbid__container-img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hotbid__card-price">
-                                        <div class="hotbid__card-price-bid"><span>2.45</span> ETH</div>
-                                        <p class="hotbid__card-items-info">3 in stock</p>
-                                    </div>
-                                </div>
-                                <div class="hotbid__card-footer">
-                                    <div class="hotbid__card-footer-name">
-                                        <img src="./images/highest_bid.svg" alt="" class="hotbid__footer-img" />
-                                        <p class="hotbid__footer-about">Highest bid <strong>0.801 ETH</strong></p>
-                                    </div>
-                                    <div class="hotbid__footer-new">
-                                        New bid 🔥
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        </template>
+                        
                     </ul>
                     <button class="discover__more-btn">Load more</button>
                 </div>
@@ -1178,6 +770,10 @@
                 </div>
             </div>
         </footer>
-        <script src="./scripts/index.js"></script>
+        <script src="./scripts/cards.js" defer></script>
+        <script src="./scripts/index.js" defer></script>
+        <script src="./scripts/carousel.js" defer></script>
+        <script src="./scripts/carousel-list.js" defer></script>
+        <script src="./scripts/discover.js" defer></script>
     </body>
 </html>
