@@ -60,26 +60,31 @@ const discoverCatalog = document.querySelector('.discover');
 
 function showItem() {
     let filterArr = [];
+    const sortableItems = discoverCatalog.querySelectorAll('.item__sortable');
     const itemsContainer = discoverCatalog.querySelectorAll('.hotbid__list-item');
     
-    btnsArray.forEach(item => {
-        
+    btnsArray.forEach(item => {        
         if (item.classList.contains('dis_active')) {
-            filterArr.push(item.value);
-            
-        }
+            filterArr.push(item.value);            
+        };
       
     });
 
+    
+
+   const hotbidListStyle = document.querySelector('.discover__edition');
+
+
     itemsContainer.forEach(item => {
         item.classList.remove('item__sortable');
-            
-        if (filterArr.includes(item.dataset.tier) == false) {
-			 item.classList.add("item__sortable");
-        }
-        if (filterArr.includes('all items')) {
-            item.classList.remove('item__sortable');
-        }	
+        filterArr.includes(item.dataset.tier) == false && item.classList.add("item__sortable");
+        filterArr.includes('all items') && item.classList.remove('item__sortable');       	
     });
-}
+
+    
+    sortableItems.length >= 9 &&
+        (hotbidListStyle.style.justifyContent = `center`, hotbidListStyle.style.gap = `32px`);
+       
+};
+
 

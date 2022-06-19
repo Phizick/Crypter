@@ -35,8 +35,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 45%;
+    justify-content: space-between;  
     align-items: center;
 }
 
@@ -87,18 +86,7 @@
 
 .discover__list-container {
     list-style-type: none;
-    color: var(--grayN);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;  
-    
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 100px; 
+ 
 }
 
 .discover__nav-item:hover {
@@ -108,22 +96,23 @@
 
 
 .discover__nav-item {
-    list-style-type: none;
+    padding: 5px 10px;
     color: var(--grayN);
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;  
-    width: 100px;
-    padding: 6px 12px;
+    width: fit-content;
+    margin-right: 15px;
+    box-sizing: border-box;
+    letter-spacing: .5px;
     cursor: pointer;
     border-radius: 100px;
     border: none;
-    
-    
+    background: transparent; 
     
 }
 
