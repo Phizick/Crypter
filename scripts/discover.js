@@ -7,7 +7,7 @@ function renderCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardP
     discoverList.prepend(createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp));
 };
 
-discoverCards.forEach(item => {
+discoverCards.slice(0, 8).forEach(item => {
     renderCard(item.link, item.splash, item.name, item.avatar, item.price, item.priceInfo, item.cardBid, item.prop);
 });
 
@@ -29,8 +29,7 @@ function createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, ca
     priceInfo.textContent = cardPriceInfo;
     bid.textContent = cardCardBid;
     name.textContent = cardName; 
-    card.dataset.tier = cardProp;
-    
+    card.dataset.tier = cardProp;    
     return card;
 };
 
@@ -82,9 +81,22 @@ function showItem() {
     });
 
     
-    sortableItems.length >= 9 &&
-        (hotbidListStyle.style.justifyContent = `center`, hotbidListStyle.style.gap = `32px`);
+    sortableItems.length >= 4 && (hotbidListStyle.style.justifyContent = `center`, hotbidListStyle.style.gap = `32px`);
        
 };
+
+
+// const moreBtn = document.getElementById('moreBtn');
+
+// moreBtn.addEventListener('click', () => {
+
+    
+    
+//     discoverCards.slice(8, i).forEach(item => {
+//         renderCard(item.link, item.splash, item.name, item.avatar, item.price, item.priceInfo, item.cardBid, item.prop);
+//     });
+    
+// });
+
 
 

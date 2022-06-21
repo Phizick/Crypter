@@ -160,7 +160,7 @@ sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
 sliderList.classList.add('grab');
 
 sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
-slider.addEventListener('touchstart', swipeStart);
+slider.addEventListener('touchstart', swipeStart, {passive: true});
 slider.addEventListener('mousedown', swipeStart);
 
 
