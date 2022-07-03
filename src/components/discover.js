@@ -1,4 +1,6 @@
 
+import { discoverCards } from "./cards";
+
 const discoverList = document.getElementById('discoverList');
 const discoverTemplate = document.querySelector('.discover__template').content;
 const hotbidList = document.getElementById('hotbidList');

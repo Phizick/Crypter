@@ -1,4 +1,4 @@
-const discoverCards = [
+export const discoverCards = [
     {
         link: "./images/gallery/img 116.jpg",
         splash: "art",
