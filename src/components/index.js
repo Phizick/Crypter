@@ -2,35 +2,41 @@ import '../pages/index.css';
 
 
 
+
 let slider = document.querySelector('.slider');
-  sliderList = slider.querySelector('.slider-list');
-  sliderTrack = slider.querySelector('.slider-track');
-  slides = slider.querySelectorAll('.slide');
-  arrows = slider.querySelector('.content__info-nav');
-  prev = arrows.children[0];
-  next = arrows.children[1];
-  slideWidth = slides[0].offsetWidth;
-  slideIndex = 0;
-  posInit = 0;
-  posX1 = 0;
-  posX2 = 0;
-  posY1 = 0;
-  posY2 = 0;
-  posFinal = 0;
-  isSwipe = false;
-  isScroll = false;
-  allowSwipe = true;
-  transition = true;
-  nextTrf = 0;
-  prevTrf = 0;
-  lastTrf = --slides.length * slideWidth;
-  posThreshold = slides[0].offsetWidth * 0.35;
-  trfRegExp = /([-0-9.]+(?=px))/;
+  let sliderList = slider.querySelector('slider-list');
+  let sliderTrack = slider.querySelector('.slider-track');
+  let slides = slider.querySelectorAll('.slide');
+  
+  
+  
+  const arrows = slider.querySelector('.content__info-nav');
+  const prev = arrows.children[0];
+  const next = arrows.children[1];
+  let slideWidth = slides[0].offsetWidth;
+  let slideIndex = 0;
+  let posInit = 0;
+  let posX1 = 0;
+  let posX2 = 0;
+  let posY1 = 0;
+  let posY2 = 0;
+  let posFinal = 0;
+  let isSwipe = false;
+  let isScroll = false;
+  let allowSwipe = true;
+  let transition = true;
+  let nextTrf = 0;
+  let prevTrf = 0;
+  console.log(typeof slides)
+  let slidesCount = slides.length;
+  let lastTrf = --slidesCount * slideWidth;
+  let posThreshold = slides[0].offsetWidth * 0.35;
+  const trfRegExp = /([-0-9.]+(?=px))/;
   
 
-  getEvent = () => (event.type.search("touch") !== -1 ? event.touches[0] : event);
+  const getEvent = () => (event.type.search("touch") !== -1 ? event.touches[0] : event);
 
-  slide = function() {
+  const slide = function() {
     if (transition) {
       sliderTrack.style.transition = 'transform .5s';
     }
@@ -39,7 +45,7 @@ let slider = document.querySelector('.slider');
     prev.classList.toggle('disabled', slideIndex === 0);
     next.classList.toggle('disabled', slideIndex === --slides.length);
   };
-  swipeStart = function() {
+  const swipeStart = function() {
     let evt = getEvent();
 
     if (allowSwipe) {
@@ -59,7 +65,7 @@ let slider = document.querySelector('.slider');
       sliderList.classList.add('grabbing');
     }
   };
-  swipeAction = function() {
+  const swipeAction = function() {
 
     let evt = getEvent();
       style = sliderTrack.style.transform;
@@ -88,6 +94,7 @@ let slider = document.querySelector('.slider');
           return;
         } else {
           allowSwipe = true;
+          
         }
       }
 
@@ -110,7 +117,7 @@ let slider = document.querySelector('.slider');
     }
 
   };
-  swipeEnd = function() {
+  const swipeEnd = function() {
     posFinal = posInit - posX1;
 
     isScroll = false;
@@ -145,8 +152,8 @@ let slider = document.querySelector('.slider');
       allowSwipe = true;
     }
 
-  },
-  setTransform = function(transform, comapreTransform) {
+  }
+  const setTransform = function(transform, comapreTransform) {
     if (transform >= comapreTransform) {
       if (transform > comapreTransform) {
         sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
@@ -154,14 +161,14 @@ let slider = document.querySelector('.slider');
     }
     allowSwipe = false;
   };
-  reachEdge = function() {
+  const reachEdge = function() {
     transition = false;
     swipeEnd();
     allowSwipe = true;
   };
 
 sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
-sliderList.classList.add('grab');
+// sliderList.classList.add('grab');
 
 sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
 slider.addEventListener('touchstart', swipeStart, {passive: true});
@@ -207,91 +214,91 @@ arrows.addEventListener("click", function () {
 
 import { discoverCards } from "./cards";
 
-const discoverList = document.getElementById('discoverList');
-const discoverTemplate = document.querySelector('.discover__template').content;
-const hotbidList = document.getElementById('hotbidList');
+// const discoverList = document.getElementById('discoverList');
+// const discoverTemplate = document.querySelector('.discover__template').content;
+// const hotbidList = document.getElementById('hotbidList');
 
-function renderCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp) {
-    discoverList.prepend(createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp));
-};
+// function renderCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp) {
+//     discoverList.prepend(createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp));
+// };
 
-discoverCards.slice(0, 8).forEach(item => {
-    renderCard(item.link, item.splash, item.name, item.avatar, item.price, item.priceInfo, item.cardBid, item.prop);
-});
+// discoverCards.slice(0, 8).forEach(item => {
+//     renderCard(item.link, item.splash, item.name, item.avatar, item.price, item.priceInfo, item.cardBid, item.prop);
+// });
 
-function createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp) {
+// function createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp) {
     
-    const card = discoverTemplate.querySelector(".hotbid__list-item").cloneNode(true);
-    const image = card.querySelector(".hotbid__card-img");
-    const splash = card.querySelector('.hotbid__card-splash');
-    const avatar = card.querySelector('.hotbid__container-img');
-    const price = card.querySelector('.hotbid__bid-span');
-    const priceInfo = card.querySelector('.hotbid__card-items-info');
-    const bid = card.querySelector('.hotbid__span');
-    const name = card.querySelector('.hotbid__container-name');
-    image.src = cardLink;
-    image.alt = cardName;     
-    splash.textContent = cardSplash; 
-    avatar.src = cardAvatar;
-    price.textContent = cardPrice;
-    priceInfo.textContent = cardPriceInfo;
-    bid.textContent = cardCardBid;
-    name.textContent = cardName; 
-    card.dataset.tier = cardProp;    
-    return card;
-};
+//     const card = discoverTemplate.querySelector(".hotbid__list-item").cloneNode(true);
+//     const image = card.querySelector(".hotbid__card-img");
+//     const splash = card.querySelector('.hotbid__card-splash');
+//     const avatar = card.querySelector('.hotbid__container-img');
+//     const price = card.querySelector('.hotbid__bid-span');
+//     const priceInfo = card.querySelector('.hotbid__card-items-info');
+//     const bid = card.querySelector('.hotbid__span');
+//     const name = card.querySelector('.hotbid__container-name');
+//     image.src = cardLink;
+//     image.alt = cardName;     
+//     splash.textContent = cardSplash; 
+//     avatar.src = cardAvatar;
+//     price.textContent = cardPrice;
+//     priceInfo.textContent = cardPriceInfo;
+//     bid.textContent = cardCardBid;
+//     name.textContent = cardName; 
+//     card.dataset.tier = cardProp;    
+//     return card;
+// };
 
-const hotbidCards = discoverCards.slice(0, 4);
+// const hotbidCards = discoverCards.slice(0, 4);
 
-hotbidCards.forEach(item => {
-    renderCardHotbid(item.link, item.splash, item.name, item.avatar, item.price, item.priceInfo, item.cardBid, item.prop);
-});
+// hotbidCards.forEach(item => {
+//     renderCardHotbid(item.link, item.splash, item.name, item.avatar, item.price, item.priceInfo, item.cardBid, item.prop);
+// });
 
-function renderCardHotbid(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp) {
-    hotbidList.prepend(createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp));
-};
+// function renderCardHotbid(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp) {
+//     hotbidList.prepend(createNewCard(cardLink, cardSplash, cardName, cardAvatar, cardPrice, cardPriceInfo, cardCardBid, cardProp));
+// };
 
-const btnsArray = document.querySelectorAll('.dis');
+// const btnsArray = document.querySelectorAll('.dis');
 
-btnsArray.forEach(item => {
-    item.addEventListener('click', () => {
-        btnsArray.forEach((item) => {
-            item.classList.remove('dis_active');
-        })
-        item.classList.toggle('dis_active');
-        showItem();
-})
-});
+// btnsArray.forEach(item => {
+//     item.addEventListener('click', () => {
+//         btnsArray.forEach((item) => {
+//             item.classList.remove('dis_active');
+//         })
+//         item.classList.toggle('dis_active');
+//         showItem();
+// })
+// });
 
-const discoverCatalog = document.querySelector('.discover');
+// const discoverCatalog = document.querySelector('.discover');
 
-function showItem() {
-    let filterArr = [];
-    const sortableItems = discoverCatalog.querySelectorAll('.item__sortable');
-    const itemsContainer = discoverCatalog.querySelectorAll('.hotbid__list-item');
+// function showItem() {
+//     let filterArr = [];
+//     const sortableItems = discoverCatalog.querySelectorAll('.item__sortable');
+//     const itemsContainer = discoverCatalog.querySelectorAll('.hotbid__list-item');
     
-    btnsArray.forEach(item => {        
-        if (item.classList.contains('dis_active')) {
-            filterArr.push(item.value);            
-        };
+//     btnsArray.forEach(item => {        
+//         if (item.classList.contains('dis_active')) {
+//             filterArr.push(item.value);            
+//         };
       
-    });
+//     });
 
     
 
-   const hotbidListStyle = document.querySelector('.discover__edition');
+//    const hotbidListStyle = document.querySelector('.discover__edition');
 
 
-    itemsContainer.forEach(item => {
-        item.classList.remove('item__sortable');
-        filterArr.includes(item.dataset.tier) == false && item.classList.add("item__sortable");
-        filterArr.includes('all items') && item.classList.remove('item__sortable');       	
-    });
+//     itemsContainer.forEach(item => {
+//         item.classList.remove('item__sortable');
+//         filterArr.includes(item.dataset.tier) == false && item.classList.add("item__sortable");
+//         filterArr.includes('all items') && item.classList.remove('item__sortable');       	
+//     });
 
     
-    sortableItems.length >= 4 && (hotbidListStyle.style.justifyContent = `center`, hotbidListStyle.style.gap = `32px`);
+//     sortableItems.length >= 4 && (hotbidListStyle.style.justifyContent = `center`, hotbidListStyle.style.gap = `32px`);
        
-};
+// };
 
 
 // const moreBtn = document.getElementById('moreBtn');
