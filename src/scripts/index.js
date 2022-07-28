@@ -1,13 +1,10 @@
-
-
-
-let slider = document.querySelector('.carousel__slider');
-  sliderList = slider.querySelector('.carousel-slider-list');
-  sliderTrack = slider.querySelector('.carousel__track');
-  slides = slider.querySelectorAll('.list__tile');
-//   arrows = slider.querySelector('.content__info-nav');
-//   prev = arrows.children[0];
-//   next = arrows.children[1];
+let slider = document.querySelector('.slider');
+  sliderList = slider.querySelector('.slider-list');
+  sliderTrack = slider.querySelector('.slider-track');
+  slides = slider.querySelectorAll('.slide');
+  arrows = slider.querySelector('.content__info-nav');
+  prev = arrows.children[0];
+  next = arrows.children[1];
   slideWidth = slides[0].offsetWidth;
   slideIndex = 0;
   posInit = 0;
@@ -163,7 +160,7 @@ sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
 sliderList.classList.add('grab');
 
 sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
-slider.addEventListener('touchstart', swipeStart);
+slider.addEventListener('touchstart', swipeStart, {passive: true});
 slider.addEventListener('mousedown', swipeStart);
 
 

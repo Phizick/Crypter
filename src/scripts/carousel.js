@@ -1,6 +1,6 @@
 
 
-export const carouselCards = [
+const carouselCards = [
     {
         name: "Edd Ruby",
         price: "2.456 ETH",
