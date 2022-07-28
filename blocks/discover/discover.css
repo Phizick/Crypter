@@ -1,0 +1,128 @@
+.discover {
+    display: flex;
+    flex-direction: column;
+    padding: 128px 160px;
+    margin: 0 auto;
+}
+
+.discover__header {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.discover__content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 2px solid rgba(119,126,144,.2);
+}
+
+.discover__select {
+    width: 180px;
+    height: 48px;
+}
+
+.discover__nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+}
+
+
+.discover__filter {
+    width: 116px;
+    height: 48px;
+    background-color: var(--blue);
+    border-radius: 90px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--back);
+}
+
+.discover__filter-values {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.discover__edition {
+    flex-wrap: wrap;
+    padding-top: 28px;
+    row-gap: 32px;
+    margin-bottom: 52px;
+
+}
+
+.discover__more-btn {
+    
+    width: 132px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    border: 2px solid #e6e8ec;
+    border-radius: 90px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+
+.discover__list-container {
+    list-style-type: none;
+ 
+}
+
+.discover__nav-item:hover {
+    cursor: pointer;
+    color: var(--black);
+}
+
+.discover__nav-item {
+    padding: 5px 10px;
+    color: var(--grayN);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    width: fit-content;
+    margin-right: 15px;
+    box-sizing: border-box;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    background: transparent; 
+    
+}
+
+.dis_active {
+    background: #353945;
+    color: var(--back);   
+   
+    
+}
+
+.dis_active:hover {
+    color: var(--back);
+}
+
