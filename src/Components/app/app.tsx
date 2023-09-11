@@ -1,4 +1,6 @@
 import Button from "../UI_components/Button/Button";
+import StyledRectangle from "../UI_components/Label/Label";
+
 
 
 function App() {
@@ -16,6 +18,14 @@ function App() {
         <Button label={'Button'} theme={"dark"} property={"neutral"} size={"medium"} state={"enabled"}/>
         <Button label={'Button'} theme={"dark"} property={"neutral"} size={"medium"} state={"disabled"}/>
         <Button label={'Button'} theme={"dark"} property={"light"} size={"small"} state={"enabled"}/>
+        <StyledRectangle color={"red"} state={"solid"} payload={"any text"}/>
+        <StyledRectangle color={"blue"} state={"ghost"} payload={"any text"}/>
+        <StyledRectangle color={"black"} state={"solid"} payload={"any text"}/>
+        <StyledRectangle color={"black"} state={"ghost"} payload={"any text"}/>
+        <StyledRectangle color={"green"} state={"solid"} payload={"any text"}/>
+        <StyledRectangle color={"green"} state={"ghost"} payload={"any text"}/>
+        <StyledRectangle color={"red"} state={"ghost"} payload={"any text"}/>
+
 
     </div>
   );

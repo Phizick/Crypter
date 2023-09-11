@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url("../../Fonts/DM Sans/DMSans-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    src: url("../../Fonts/Poppins/Poppins-Regular.woff")  format("woff");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    src: url("../../Fonts/Poppins/Poppins-Medium.woff")  format("woff");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url("../../Fonts/Poppins/Poppins-Bold.woff")  format("woff");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url("../../Fonts/Poppins/Poppins-SemiBold.woff")  format("woff");
+}
+
+

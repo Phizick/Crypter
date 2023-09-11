@@ -1,15 +1,14 @@
 import React from "react";
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {
     PRIMARY_BLUE,
     NEUTRAL_GRAY,
     NEUTRAL_DARKSNOW, NEUTRAL_WHITE, NEUTRAL_SNOWWHITE, NEUTRAL_LIGHTGRAY
 } from '../../../Constants/Colors/Colors'
 import {TEXT_STYLES} from "../../../Constants/Typography/Typography";
-import { ButtonHTMLAttributes } from 'react';
 
 
-interface ButtonProps {
+interface IButtonProps {
     label: string;
     icon?: any;
     theme: "white" | "dark";
@@ -20,7 +19,7 @@ interface ButtonProps {
     onClick?: () => void;
 }
 
-const ButtonWrapper = styled.button<ButtonProps>`  
+const ButtonWrapper = styled.button<IButtonProps>`  
   border-radius: 90px;
   justify-content: center;
   display: flex;
@@ -44,8 +43,7 @@ const ButtonWrapper = styled.button<ButtonProps>`
       background-color: ${NEUTRAL_SNOWWHITE};
       color: ${NEUTRAL_GRAY};
     }
-  }  
-  
+  }
   
   &.small {
     height: 40px;
@@ -97,7 +95,7 @@ const ButtonWrapper = styled.button<ButtonProps>`
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<IButtonProps> = ({
                                            label,
                                            icon,
                                            theme,
