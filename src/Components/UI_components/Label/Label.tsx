@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
     PRIMARY_BLUE,
     NEUTRAL_GRAY,
-    NEUTRAL_DARKSNOW, NEUTRAL_WHITE, NEUTRAL_SNOWWHITE, NEUTRAL_LIGHTGRAY, PRIMARY_GREEN, PRIMARY_PINK, PRIMARY_VIOLET
+   NEUTRAL_SNOWWHITE, PRIMARY_GREEN, PRIMARY_PINK, PRIMARY_VIOLET
 } from '../../../Constants/Colors/Colors';
 import {TEXT_STYLES} from "../../../Constants/Typography/Typography";
 
@@ -41,8 +41,7 @@ const Rectangle = styled.div<ILabelProps>`
       color: ${PRIMARY_GREEN};
       border: 2px solid ${PRIMARY_GREEN};
       background-color: transparent;
-    }
-   
+    }   
   }
   
   &.red {
@@ -52,8 +51,7 @@ const Rectangle = styled.div<ILabelProps>`
       color: ${PRIMARY_PINK};
       border: 2px solid ${PRIMARY_PINK};
       background-color: transparent;
-    }
-    
+    }    
   }
 
   &.blue {
@@ -63,8 +61,7 @@ const Rectangle = styled.div<ILabelProps>`
       color: ${PRIMARY_BLUE};
       border: 2px solid ${PRIMARY_BLUE};
       background-color: transparent;
-    }
-   
+    }   
   }
 
   &.purple {
@@ -74,12 +71,11 @@ const Rectangle = styled.div<ILabelProps>`
       color: ${NEUTRAL_GRAY};
       border: 2px solid ${NEUTRAL_GRAY};
       background-color: transparent;
-    }
-   
+    }   
   }
 `;
 
-const StyledRectangle: React.FC<ILabelProps> = ({
+const Label: React.FC<ILabelProps> = ({
     color,
     state,
     payload
@@ -97,4 +93,4 @@ const StyledRectangle: React.FC<ILabelProps> = ({
     );
 };
 
-export default StyledRectangle;
+export default Label;
