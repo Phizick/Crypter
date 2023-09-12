@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import {
-    NEUTRAL_LIGHT,
+    NEUTRAL_LIGHT, NEUTRAL_LIGHTGRAY, NEUTRAL_SHADOW,
     PRIMARY_BLUE,
     PRIMARY_GREEN,
     PRIMARY_PINK
@@ -25,13 +25,30 @@ const Input = styled.input<{ isError: boolean; isSuccess: boolean }>`
     ${(props) => {
     if (props.isError) return `${PRIMARY_PINK}`;
     if (props.isSuccess) return `${PRIMARY_GREEN}`;
-    return `${PRIMARY_BLUE}`;
+    return `${NEUTRAL_LIGHT}`;
 }};
   border-radius: 12px;
   padding: 8px 8px 8px 16px;
   outline: none;
   gap: 18px;
   flex-shrink: 0;
+
+  &:focus {
+    border-color: ${(props) => {
+      if (props.isError) return PRIMARY_PINK;
+      if (props.isSuccess) return PRIMARY_GREEN;
+      return PRIMARY_BLUE;
+    }};
+  }
+
+  &:hover:not(:focus),
+  &:not(:focus):not(:placeholder-shown) {
+    border-color: ${(props) => {
+      if (props.isError) return PRIMARY_PINK;
+      if (props.isSuccess) return PRIMARY_GREEN;
+      return NEUTRAL_LIGHTGRAY;
+    }};
+  }
 `;
 
 
