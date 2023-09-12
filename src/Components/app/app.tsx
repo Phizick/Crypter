@@ -1,6 +1,7 @@
 import Button from "../UI_components/Button/Button";
 import Label from "../UI_components/Label/Label";
 import InputSingle from "../UI_components/InputField/InputSingle/InputSingle";
+import InputBasic from "../UI_components/InputField/InputBasic/InputBasic";
 
 
 
@@ -26,7 +27,8 @@ function App() {
         <Label color={"green"} state={"solid"} payload={"any text"}/>
         <Label color={"green"} state={"ghost"} payload={"any text"}/>
         <Label color={"red"} state={"ghost"} payload={"any text"}/>
-        <InputSingle placeholder={'Enter your email'}/>
+        {/*<InputSingle placeholder={'Enter your email'}/>*/}
+          <InputBasic placeholder={'test'} label={'email'}/>
 
 
     </div>
