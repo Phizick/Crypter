@@ -6,6 +6,8 @@ import {
     NEUTRAL_DARKSNOW, NEUTRAL_WHITE, NEUTRAL_SNOWWHITE, NEUTRAL_LIGHTGRAY
 } from '../../../Constants/Colors/Colors'
 import {TEXT_STYLES} from "../../../Constants/Typography/Typography";
+import starIconWhite from '../../../Images/Icons/btn_icon_star_white.png'
+import starIconBlack from '../../../Images/Icons/btn_icon_star_black.png'
 
 
 interface IButtonProps {
@@ -28,6 +30,7 @@ const ButtonWrapper = styled.button<IButtonProps>`
   transition: filter .5s;
   width: fit-content;
   cursor: pointer;
+  gap: 12px;
   
   &.dark {
     background-color: transparent;
@@ -37,12 +40,12 @@ const ButtonWrapper = styled.button<IButtonProps>`
     &.disabled {
       background-color: ${NEUTRAL_SNOWWHITE};
       color: ${NEUTRAL_GRAY};
-    }    
-    
+    }
+
     &:hover {
       background-color: ${NEUTRAL_SNOWWHITE};
-      color: ${NEUTRAL_GRAY};
-    }
+      color: ${NEUTRAL_GRAY};     
+    }   
   }
   
   &.small {
@@ -83,6 +86,14 @@ const ButtonWrapper = styled.button<IButtonProps>`
       background-color: ${NEUTRAL_GRAY};
       color: ${NEUTRAL_SNOWWHITE};
     }
+
+    img {
+      transition: filter .5s;
+    }
+
+    &:hover img {
+      content: url(${starIconWhite});
+    }
   }
   
   &.disabled {
@@ -106,12 +117,13 @@ const Button: React.FC<IButtonProps> = ({
                                            state
                                        }) => {
     const buttonClasses = `${theme} ${size} ${property} ${state} ${icon ? "with-icon" : ""} ${iconPosition === "right" ? "right" : ""}`;
+    const iconComponent = theme === "white" && property !== "light" ? <img src={starIconWhite} alt={'icon'}/> : <img src={starIconBlack} alt={'icon'}/>;
 
     return (
         <ButtonWrapper className={buttonClasses} onClick={onClick} property={property} label={''} size={size} state={state}>
-            {icon && iconPosition === "left" && icon}
+            {iconPosition === "left" && iconComponent}
             {label}
-            {icon && iconPosition === "right" && icon}
+            {iconPosition === "right" && iconComponent}
         </ButtonWrapper>
     );
 };

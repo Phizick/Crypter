@@ -21,3 +21,5 @@ export const NEUTRAL_LIGHT:string = 'rgb(177, 181, 195)';
 export const NEUTRAL_DARKSNOW:string = 'rgb(230, 232, 236)';
 export const NEUTRAL_WHITE:string = 'rgb(244, 245, 246)';
 export const NEUTRAL_SNOWWHITE:string = 'rgb(252, 252, 253)';
+
+export const NEUTRAL_BACKGROUND:string = 'rgb(206, 206, 206)';

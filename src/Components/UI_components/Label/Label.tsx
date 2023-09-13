@@ -87,10 +87,7 @@ const Label: React.FC<ILabelProps> = ({
                 <Rectangle className={labelClasses} color={color} state={state} payload={payload}>
                     {payload}
                 </Rectangle>
-
-
         </div>
     );
 };
-
 export default Label;
