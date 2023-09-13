@@ -60,7 +60,7 @@ export const HEADLINERS_STYLES: Record<string, any> = {
 export const TEXT_STYLES: Record<string, any> = {
     TEXT_BIG: {
         "font-family": "Poppins",
-        "font-size": "21px",
+        "font-size": "24px",
         "font-style": "normal",
         "font-weight": "400",
         "line-height": "32px",

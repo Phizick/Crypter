@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import {
+    NEUTRAL_DARKSNOW,
     NEUTRAL_GRAY,
     NEUTRAL_LIGHTGRAY,
     NEUTRAL_SNOWWHITE,
@@ -28,7 +29,7 @@ const Input = styled.input<{ isError: boolean; isSuccess: boolean }>`
     ${(props) => {
     if (props.isError) return `${PRIMARY_PINK}`;
     if (props.isSuccess) return `${PRIMARY_GREEN}`;
-    return `${PRIMARY_BLUE}`;
+    return `${NEUTRAL_DARKSNOW}`;
 }};
   border-radius: 90px;
   padding: 8px 8px 8px 16px;

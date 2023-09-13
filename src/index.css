@@ -5,11 +5,9 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #cecece;
-    display: flex;
-    justify-content: center;
-    padding-top: 120px;
-    gap: 12px;
+    background: rgb(252, 252, 253);
+
+    max-width: 1440px;
 
 
 }

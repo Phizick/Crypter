@@ -6,8 +6,10 @@ import {
     NEUTRAL_DARKSNOW, NEUTRAL_WHITE, NEUTRAL_SNOWWHITE, NEUTRAL_LIGHTGRAY
 } from '../../../Constants/Colors/Colors'
 import {TEXT_STYLES} from "../../../Constants/Typography/Typography";
+// @ts-ignore
 import starIconWhite from '../../../Images/Icons/btn_icon_star_white.png'
-import starIconBlack from '../../../Images/Icons/btn_icon_star_black.png'
+// @ts-ignore
+import starIconBlack from "../../../Images/Icons/btn_icon_star_black.png"
 
 
 interface IButtonProps {
