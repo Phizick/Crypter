@@ -9,6 +9,19 @@ import SearchInput from "../UI_components/SearchInput/SearchInput";
 import Accordion from "../UI_components/AccordionList/AccordionList";
 import Navbar from "../HeaderNav/HeaderNav";
 import Footer from "../Footer/Footer";
+import AuctionItem from "../AuctionItem/AuctionItem";
+// @ts-ignore
+import image2 from '../../Images/ImageItems/image_1.png'
+// @ts-ignore
+import image1 from '../../Images/ImageItems/image_2.png'
+// @ts-ignore
+import image3 from '../../Images/ImageItems/image_3.png'
+// @ts-ignore
+import image4 from '../../Images/ImageItems/image_5.png'
+// @ts-ignore
+import image5 from '../..//Images/ImageItems/image_6.png'
+import Carousel from "../Carousel/Carousel";
+import HeaderNav from "../HeaderNav/HeaderNav";
 
 
 // @ts-ignore
@@ -42,15 +55,22 @@ function App() {
         }
     ];
 
-
+    const slides = [
+        <AuctionItem imageUrl={image1} username="Alice" price={1500} imageName="Image for bottoms" expiryTime={20000}  />,
+        <AuctionItem imageUrl={image2} username="Bob" price={1200} imageName="Image for tops" expiryTime={20000}  />,
+        <AuctionItem imageUrl={image3} username="Charlie" price={1800} imageName="Image for shoes" expiryTime={20000}  />,
+        <AuctionItem imageUrl={image4} username="Bobster" price={4200} imageName="Image for any" expiryTime={22000}  />,
+        <AuctionItem imageUrl={image5} username="Charlie Brown" price={70000} imageName="Image for Charlie" expiryTime={18000}  />,
+        <AuctionItem imageUrl={image5} username="Charlie Brown" price={70000} imageName="Image for Charlie" expiryTime={18000}  />,
+    ];
 
 
     return (
-        <div style={{ margin: '0 auto' }}>
-        <Navbar/>
-        <Footer/>
-        </div>
-
+        <>
+            <HeaderNav/>
+       <Carousel slides={slides}/>
+            <Footer/>
+        </>
     )
 }
 

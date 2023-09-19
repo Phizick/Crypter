@@ -27,12 +27,12 @@ const ButtonWrapper = styled.button<IButtonProps>`
   border-radius: 90px;
   justify-content: center;
   display: flex;
-  align-items: center;
-  margin: 10px;
+  align-items: center;  
   transition: filter .5s;
-  width: fit-content;
+  width: 100%;  
   cursor: pointer;
   gap: 12px;
+  margin: 0;
   
   &.dark {
     background-color: transparent;
