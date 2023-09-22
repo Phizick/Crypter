@@ -14,7 +14,8 @@ const NavbarContainer = styled.header`
   align-items: center;  
   background-color: ${NEUTRAL_SNOWWHITE};
   max-width: 1440px;
-  width: 100%;  
+  width: 100%;
+  margin: 0 auto;
   border-bottom: 2px solid rgba(${NEUTRAL_LIGHTGRAY.slice(4, -1)}, .2);
 
   @media (max-width: 750px) {
@@ -64,6 +65,7 @@ const NavbarMedia = styled.div`
   flex-direction: row;
   align-items: center;
   transition: opacity .5s ease;
+  gap: 15px;
 
   @media (max-width: 750px) {
     animation: fadeOut 1s ease forwards;

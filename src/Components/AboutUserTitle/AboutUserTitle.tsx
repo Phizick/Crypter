@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {TEXT_STYLES} from "../../Constants/Typography/Typography";
 import {NEUTRAL_GRAY, NEUTRAL_LIGHTGRAY, SECONDARY_BROWN} from "../../Constants/Colors/Colors";
 // @ts-ignore
-import avatarMock from '../../Images/avatar.png'
+import avatarMock from '../../Images/Avatars/avatar.png'
 
 interface AvatarProps {
     name: string;
