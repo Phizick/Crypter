@@ -12,8 +12,6 @@ interface SliderProps {
     price: number;
     imageName: string;
     expiryTime: number;
-    rightArrow?: () => void;
-    leftArrow?: () => void;
 }
 
 const Container = styled.div`
@@ -21,6 +19,8 @@ const Container = styled.div`
   flex-direction: row;
   gap: 128px;
   transition: gap .6s ease;
+  z-index: 15; 
+  margin-left: 370px;
   
   @media (max-width: 1210px) {
     gap: 32px
@@ -59,6 +59,7 @@ const InfoContainer = styled.div`
   flex-direction: column;
   gap: 40px;
   max-width: 352px;
+  z-index: 15;
 `;
 
 const UserInfo = styled.div`
@@ -83,16 +84,7 @@ const ButtonContainer = styled.div`
   gap: 8px;
 `;
 
-const ArrowContainer = styled.div`
-    display: flex;
-  flex-direction: row;
-  gap: 8px;
 
-  @media (max-width: 920px) {    
-    justify-content: center;
-    align-items: center;
-  }
-`;
 
 const AuctionItem: React.FC<SliderProps> = ({
                                            imageUrl,
@@ -100,8 +92,6 @@ const AuctionItem: React.FC<SliderProps> = ({
                                            price,
                                            imageName,
                                            expiryTime,
-                                                rightArrow,
-                                                leftArrow,
                                        }) => {
     const [timeRemaining, setTimeRemaining] = useState(expiryTime);
 
@@ -129,10 +119,6 @@ const AuctionItem: React.FC<SliderProps> = ({
                     <Button label={'Place a bid'} theme={"white"} size={"medium"} state={"enabled"} property={"neutral"}/>
                     <Button label={'View item'} theme={"white"} size={"medium"} state={"enabled"} property={"light"}/>
                 </ButtonContainer>
-                <ArrowContainer>
-                    <ArrowButton arrowDirection={"left"} onClick={leftArrow}/>
-                    <ArrowButton arrowDirection={"right"} onClick={rightArrow}/>
-                </ArrowContainer>
             </InfoContainer>
         </Container>
     );
