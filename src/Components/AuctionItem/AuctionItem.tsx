@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import {HEADLINERS_STYLES, TEXT_STYLES} from "../../Constants/Typography/Typography";
+import {HEADLINERS_STYLES} from "../../Constants/Typography/Typography";
 import AboutUserTitle from "../AboutUserTitle/AboutUserTitle";
 import BidItem from "../BidItem/BidItem";
 import Button from "../UI_components/Button/Button";
-import ArrowButton from "../UI_components/ArrowButton/ArrowButton";
 
 interface SliderProps {
     imageUrl: string;
@@ -20,7 +19,7 @@ const Container = styled.div`
   gap: 128px;
   transition: gap .6s ease;
   z-index: 15; 
-  margin-left: 370px;
+  margin-left: 170px;
   
   @media (max-width: 1210px) {
     gap: 32px
@@ -67,11 +66,6 @@ const UserInfo = styled.div`
   flex-direction: column;
 `;
 
-
-const Price = styled.span`
-  margin-top: 5px;
-`;
-
 const ImageName = styled.div`  
   ${Object.entries(HEADLINERS_STYLES.HEADLINE_FIRST).map(([key, value]) => `${key}: ${value};`).join('\n')};
   flex-wrap: wrap;
@@ -83,8 +77,6 @@ const ButtonContainer = styled.div`
   flex-direction: column;
   gap: 8px;
 `;
-
-
 
 const AuctionItem: React.FC<SliderProps> = ({
                                            imageUrl,

@@ -10,10 +10,9 @@ import {TEXT_STYLES} from "../../Constants/Typography/Typography";
 
 const NavbarContainer = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;  
-  background-color: ${NEUTRAL_SNOWWHITE};
-  max-width: 1440px;
+  background-color: ${NEUTRAL_SNOWWHITE};  
   width: 100%;
   margin: 0 auto;
   border-bottom: 2px solid rgba(${NEUTRAL_LIGHTGRAY.slice(4, -1)}, .2);

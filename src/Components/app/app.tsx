@@ -5,10 +5,9 @@ import InputBasic from "../UI_components/InputField/InputBasic/InputBasic";
 import Select from "../UI_components/Dropdown/Dropdown";
 import DropDown from "../UI_components/Dropdown/Dropdown";
 import {
+    NEUTRAL_WHITE,
     PRIMARY_BLUE,
-    PRIMARY_GREEN,
-    PRIMARY_PINK,
-    PRIMARY_VIOLET, SECONDARY_VIOLET,
+    PRIMARY_VIOLET,
     SECONDARY_YELLOW
 } from "../../Constants/Colors/Colors";
 import SearchInput from "../UI_components/SearchInput/SearchInput";
@@ -17,7 +16,7 @@ import Navbar from "../HeaderNav/HeaderNav";
 import Footer from "../Footer/Footer";
 import AuctionItem from "../AuctionItem/AuctionItem";
 // @ts-ignore
-import image2 from '../../Images/ImageItems/image_1.png'
+
 // @ts-ignore
 import image1 from '../../Images/ImageItems/image_2.png'
 // @ts-ignore
@@ -31,6 +30,10 @@ import HeaderNav from "../HeaderNav/HeaderNav";
 import UserMiniProfile from "../UserMiniProfile/UserMiniProfile";
 import List from "../UserList/UserList";
 import Slider from "../Slider/Slider";
+import TopCreatorsCard from "../TopCreatorsCard/TopCreatorsCard";
+import avatarTest from '../../Images/Avatars/avatar_6.png'
+import styled from "styled-components";
+import TopCreatorsSlider from "../TopCreatorsSlider/TopCreatorsSlider";
 
 
 
@@ -65,27 +68,45 @@ function App() {
         }
     ];
 
+    const list = styled.div`
+    background-color: ${NEUTRAL_WHITE};
+    display: flex;
+    flex-direction: row;
+`;
+
     const slides = [
         <AuctionItem imageUrl={image1} username="Alice" price={1500} imageName="Image for bests" expiryTime={20000}  />,
-        <AuctionItem imageUrl={image2} username="Bob" price={1200} imageName="Image for tops" expiryTime={20000}  />,
         <AuctionItem imageUrl={image3} username="Charlie" price={1800} imageName="Image for " expiryTime={20000}  />,
         <AuctionItem imageUrl={image4} username="Bobster" price={4200} imageName="Image for any" expiryTime={22000}  />,
         <AuctionItem imageUrl={image5} username="Charlie Brown" price={7000} imageName="Image for " expiryTime={18000}  />,
         <AuctionItem imageUrl={image5} username="Charlie Brown" price={7000} imageName="Image for" expiryTime={18000}  />,
     ];
 
+    const slidesSellers = [
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />,
+        <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />
+    ]
 
     return (
        <>
         <HeaderNav/>
-        <Slider cards={1}>
+        <Slider cards={1} cardContainer={1500} position={'auction'}>
             {slides}
         </Slider>
-    <Footer/>
+
+               <Slider cards={5} position={'creators'} cardContainer={280}>
+                   {slidesSellers}
+               </Slider>
+
+        <Footer/>
        </>
     )
 }
-
-
 
 export default App;
