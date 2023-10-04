@@ -25,7 +25,7 @@ import image3 from '../../Images/ImageItems/image_3.png'
 import image4 from '../../Images/ImageItems/image_5.png'
 // @ts-ignore
 import image5 from '../..//Images/ImageItems/image_6.png'
-import Carousel from "../Carousel_legacy/Carousel";
+
 import HeaderNav from "../HeaderNav/HeaderNav";
 import UserMiniProfile from "../UserMiniProfile/UserMiniProfile";
 import List from "../UserList/UserList";
@@ -34,6 +34,7 @@ import TopCreatorsCard from "../TopCreatorsCard/TopCreatorsCard";
 import avatarTest from '../../Images/Avatars/avatar_6.png'
 import styled from "styled-components";
 import TopCreatorsSlider from "../TopCreatorsSlider/TopCreatorsSlider";
+import Feed from "../Feed/Feed";
 
 
 
@@ -96,13 +97,19 @@ function App() {
     return (
        <>
         <HeaderNav/>
-        <Slider cards={1} cardContainer={1500} position={'auction'}>
-            {slides}
-        </Slider>
+        {/*<Slider cards={1} cardContainer={1500} position={'auction'}>*/}
+        {/*    {slides}*/}
+        {/*</Slider>*/}
 
-               <Slider cards={5} position={'creators'} cardContainer={280}>
-                   {slidesSellers}
-               </Slider>
+        {/*       <Slider cards={5} position={'creators'} cardContainer={280}>*/}
+        {/*           {slidesSellers}*/}
+        {/*       </Slider>*/}
+           <div style={{marginLeft: "400px"}}>
+               <Feed size={'big'} imageURL={image4} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
+           <Feed size={'small'} imageURL={image1} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
+               <Feed size={'small'} imageURL={image5} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
+               <Feed size={'small'} imageURL={image3} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 12'}/>
+           </div>
 
         <Footer/>
        </>

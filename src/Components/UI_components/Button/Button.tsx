@@ -85,7 +85,7 @@ const ButtonWrapper = styled.button<IButtonProps>`
     transition: background-color .5s;
     
     &:hover {
-      background-color: ${NEUTRAL_GRAY};
+      background-color: ${PRIMARY_BLUE};
       color: ${NEUTRAL_SNOWWHITE};
     }
 
