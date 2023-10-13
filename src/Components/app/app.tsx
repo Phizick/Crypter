@@ -35,6 +35,8 @@ import avatarTest from '../../Images/Avatars/avatar_6.png'
 import styled from "styled-components";
 import TopCreatorsSlider from "../TopCreatorsSlider/TopCreatorsSlider";
 import Feed from "../Feed/Feed";
+import CardItem from "../CardItem/CardItem";
+import CardLikeButton from "../UI_components/CardLikeButton/CardLikeButton";
 
 
 
@@ -79,7 +81,8 @@ function App() {
         <AuctionItem imageUrl={image1} username="Alice" price={1500} imageName="Image for bests" expiryTime={20000}  />,
         <AuctionItem imageUrl={image3} username="Charlie" price={1800} imageName="Image for " expiryTime={20000}  />,
         <AuctionItem imageUrl={image4} username="Bobster" price={4200} imageName="Image for any" expiryTime={22000}  />,
-        <AuctionItem imageUrl={image5} username="Charlie Brown" price={7000} imageName="Image for " expiryTime={18000}  />,
+        <AuctionItem imageUrl={image5} username="Charlie Brown" price={7000} imageName="Image for"
+                     expiryTime={18000}/>,
         <AuctionItem imageUrl={image5} username="Charlie Brown" price={7000} imageName="Image for" expiryTime={18000}  />,
     ];
 
@@ -94,21 +97,54 @@ function App() {
         <TopCreatorsCard avatar={avatarTest} name={'Mike'} amount={1000} />
     ]
 
+    const autors = [
+        `${avatarTest}`,
+        `${avatarTest}`,
+        `${avatarTest}`,
+    ];
+
+    const slidesCards = [
+        <CardItem imageUrl={image3} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image4} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image5} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image3} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image4} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image5} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image3} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image4} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image5} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image3} title={'any card'} authors={autors}/>,
+        <CardItem imageUrl={image4} title={'any card'} authors={autors}/>,
+    ]
+
     return (
        <>
         <HeaderNav/>
-        {/*<Slider cards={1} cardContainer={1500} position={'auction'}>*/}
-        {/*    {slides}*/}
-        {/*</Slider>*/}
+           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>
+        <Slider cards={1} cardContainer={1500} position={'auction'}>
+            {slides}
+        </Slider>
+           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>
 
-        {/*       <Slider cards={5} position={'creators'} cardContainer={280}>*/}
-        {/*           {slidesSellers}*/}
-        {/*       </Slider>*/}
-           <div style={{marginLeft: "400px"}}>
-               <Feed size={'big'} imageURL={image4} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
-           <Feed size={'small'} imageURL={image1} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
-               <Feed size={'small'} imageURL={image5} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
-               <Feed size={'small'} imageURL={image3} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 12'}/>
+
+               <Slider cards={5} position={'creators'} cardContainer={280}>
+                   {slidesSellers}
+               </Slider>
+           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>
+
+           <Slider cards={4} position={'hotbid'} cardContainer={250}>
+               {slidesCards}
+           </Slider>
+
+           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px'}}>
+           {/*    <Feed size={'big'} imageURL={image4} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
+           {/*<Feed size={'small'} imageURL={image1} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
+           {/*    <Feed size={'small'} imageURL={image5} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
+           {/*    <Feed size={'small'} imageURL={image3} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 12'}/>*/}
+           {/*    <CardItem imageUrl={image3} title={'any card'} authors={autors}/>*/}
+           {/*    <CardItem imageUrl={image4} title={'any card'} authors={autors}/>*/}
+           {/*    <CardItem imageUrl={image5} title={'any card'} authors={autors}/>*/}
+
            </div>
 
         <Footer/>

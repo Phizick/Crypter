@@ -3,8 +3,8 @@ import styled from 'styled-components';
 // @ts-ignore
 import footerLogo from '../../Images/Logo/logo_horizontal_white.png'
 import InputSingle from "../UI_components/InputField/InputSingle/InputSingle";
-import { TEXT_STYLES } from "../../Constants/Typography/Typography";
-import { NEUTRAL_GRAY, NEUTRAL_LIGHTGRAY } from "../../Constants/Colors/Colors";
+import {TEXT_STYLES} from "../../Constants/Typography/Typography";
+import {NEUTRAL_GRAY, NEUTRAL_LIGHTGRAY} from "../../Constants/Colors/Colors";
 
 const FooterContainer = styled.footer`
   padding: 20px;

@@ -1,3 +1,11 @@
+/**
+ * @component AboutUserTitle
+ *
+ * @description компонент-контейнер для отображения информации о пользователе.
+ *
+ * @param name - имя пользователя.
+ */
+
 import React from "react";
 import styled from "styled-components";
 import {TEXT_STYLES} from "../../Constants/Typography/Typography";
@@ -9,12 +17,14 @@ interface AvatarProps {
     name: string;
 }
 
+// контейнер для отображения информации о пользователе
 const Container = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
 `;
 
+// отображение аватарки пользователя
 const AvatarImage = styled.div`
   width: 40px;
   height: 40px;
@@ -25,23 +35,27 @@ const AvatarImage = styled.div`
   background-repeat: no-repeat;
 `;
 
+// отображение информации о пользователе
 const UserInfo = styled.div`
   margin-left: 10px;
 `;
 
+// заголовок информации о пользователе
 const Title = styled.h2`
   ${Object.entries(TEXT_STYLES.TEXT_CAPTION_SMALL).map(([key, value]) => `${key}: ${value};`).join('\n')};
   color: ${NEUTRAL_LIGHTGRAY};
   margin: 0;
 `;
 
+// имя пользователя
 const Name = styled.p`
   ${Object.entries(TEXT_STYLES.TEXT_CAPTION_BOLD).map(([key, value]) => `${key}: ${value};`).join('\n')};
   margin: 0;
   color: ${NEUTRAL_GRAY};
 `;
 
-const AboutUserTitle: React.FC<AvatarProps> = ({ name }) => {
+// Компонент для отображения заголовка и имени пользователя
+const AboutUserTitle: React.FC<AvatarProps> = ({name}) => {
     return (
         <Container>
             <AvatarImage />
@@ -52,4 +66,5 @@ const AboutUserTitle: React.FC<AvatarProps> = ({ name }) => {
         </Container>
     );
 };
+
 export default AboutUserTitle;

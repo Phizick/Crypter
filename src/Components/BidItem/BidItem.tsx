@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import {NEUTRAL_DARKSNOW, NEUTRAL_LIGHTGRAY, NEUTRAL_SNOWWHITE} from "../../Constants/Colors/Colors";
 import {HEADLINERS_STYLES, TEXT_STYLES} from "../../Constants/Typography/Typography";
+
+/**
+ * @typedef {Object} PriceTimerProps - Пропсы компонента PriceTimer
+ * @property {number} time - Время аукциона в секундах
+ * @property {number} price - Текущая ставка
+ */
 
 interface PriceTimerProps {
     time: number;
@@ -65,26 +71,44 @@ const TimerLabel = styled.span`
 `;
 
 
-const BidItem: React.FC<PriceTimerProps> = ({ time, price }) => {
-    const [remainingTime, setRemainingTime] = useState(time);
+/**
+ * @description Компонент, отображающий информацию о текущей ставке, цене, конвертированной цене и таймере для аукциона
+ * @param {PriceTimerProps} props - Пропсы компонента
+ * @returns {JSX.Element} - Возвращает JSX-элемент
+ */
+const BidItem: React.FC<PriceTimerProps> = ({time, price}: PriceTimerProps): JSX.Element => {
+    // хранение оставшегося времени аукциона
+    const [remainingTime, setRemainingTime] = useState<number>(time);
 
+    // обновление оставшегося времени каждую секунду
     useEffect(() => {
         const interval = setInterval(() => {
             setRemainingTime((prevTime) => prevTime - 1);
         }, 1000);
 
+        // сброс интервала при анмаунте компонента
         return () => {
             clearInterval(interval);
         };
     }, [time]);
 
+    /**
+     * @description Форматирование времени в формат "чч:мм:сс"
+     * @param {number} time - Время в секундах
+     * @returns {string} - Отформатированное время в формате "чч:мм:сс"
+     */
     const formatTime = (time: number): string => {
-        const hours = Math.floor(time / 3600).toString().padStart(2, "0");
-        const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, "0");
-        const seconds = (time % 60).toString().padStart(2, "0");
+        const hours = Math.floor(time / 3600).toString().padStart(2, '0');
+        const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
+        const seconds = (time % 60).toString().padStart(2, '0');
         return `${hours}:${minutes}:${seconds}`;
     };
 
+    /**
+     * @description Конвертирование цены в рубли по заданному курсу
+     * @param {number} price - Цена в долларах
+     * @returns {string} - Конвертированная цена в формате "X XXX XXX,XX ₽"
+     */
     const convertPriceToRub = (price: number): string => {
         const exchangeRate = 92;
         const convertedPrice = price * exchangeRate;
@@ -99,21 +123,20 @@ const BidItem: React.FC<PriceTimerProps> = ({ time, price }) => {
             <TimerTitle>Auction ending in</TimerTitle>
             <TimerContainer>
                 <Column>
-                    <TimerValue>{formatTime(remainingTime).split(":")[0]}</TimerValue>
+                    <TimerValue>{formatTime(remainingTime).split(':')[0]}</TimerValue>
                     <TimerLabel>Hrs</TimerLabel>
                 </Column>
                 <Column>
-                    <TimerValue>{formatTime(remainingTime).split(":")[1]}</TimerValue>
+                    <TimerValue>{formatTime(remainingTime).split(':')[1]}</TimerValue>
                     <TimerLabel>mins</TimerLabel>
                 </Column>
                 <Column>
-                    <TimerValue>{formatTime(remainingTime).split(":")[2]}</TimerValue>
+                    <TimerValue>{formatTime(remainingTime).split(':')[2]}</TimerValue>
                     <TimerLabel>secs</TimerLabel>
                 </Column>
             </TimerContainer>
         </Container>
     );
 };
-
 
 export default BidItem;

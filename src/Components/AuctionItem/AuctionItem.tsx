@@ -1,4 +1,22 @@
-import React, { useState, useEffect } from "react";
+/**
+ * Компонент AuctionItem
+ *
+ * @component
+ *
+ * @description Компонент для отображения элемента аукциона.
+ *
+ * @param props - Свойства компонента.
+ * @param props.imageUrl - URL изображения.
+ * @param props.username - Имя пользователя.
+ * @param props.price - Цена.
+ * @param props.imageName - Название изображения.
+ * @param props.expiryTime - Время до окончания аукциона.
+ *
+ returns - Элемент аукциона.
+ */
+
+
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import {HEADLINERS_STYLES} from "../../Constants/Typography/Typography";
 import AboutUserTitle from "../AboutUserTitle/AboutUserTitle";
@@ -79,12 +97,12 @@ const ButtonContainer = styled.div`
 `;
 
 const AuctionItem: React.FC<SliderProps> = ({
-                                           imageUrl,
-                                           username,
-                                           price,
-                                           imageName,
-                                           expiryTime,
-                                       }) => {
+                                                imageUrl,
+                                                username,
+                                                price,
+                                                imageName,
+                                                expiryTime,
+                                            }) => {
     const [timeRemaining, setTimeRemaining] = useState(expiryTime);
 
     useEffect(() => {

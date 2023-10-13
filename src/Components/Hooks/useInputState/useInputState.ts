@@ -3,7 +3,31 @@ import arrowIcon from "../../../Images/Icons/arrow_icon_btn.png";
 import loaderIcon from "../../../Images/Icons/loader.png";
 import correctSearchIcon from "../../../Images/Icons/correct_search_icon.png";
 
-export const useInputState = () => {
+/**
+ * Хук для управления состоянием ввода.
+ * @returns {{
+ *  inputValue: string,
+ *  isError: boolean,
+ *  isLoading: boolean,
+ *  isSuccess: boolean,
+ *  disabledBtn: boolean,
+ *  handleInputChange: Function,
+ *  handleSubmit: Function,
+ *  clearInput: Function,
+ *  getButtonIcon: Function
+ * }}
+ */
+export const useInputState = (): {
+    inputValue: string;
+    isError: boolean;
+    isLoading: boolean;
+    isSuccess: boolean;
+    disabledBtn: boolean;
+    handleInputChange: Function;
+    handleSubmit: Function;
+    clearInput: Function;
+    getButtonIcon: Function;
+} => {
     const [inputValue, setInputValue] = useState("");
     const [isError, setIsError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -11,6 +35,10 @@ export const useInputState = () => {
     const [buttonState, setButtonState] = useState(1);
     const [disabledBtn, setDisabled] = useState(false);
 
+    /**
+     * Обработчик изменения значения в поле ввода.
+     * @param {React.ChangeEvent<HTMLInputElement>} e - Событие изменения значения в поле ввода.
+     */
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
         setIsError(false);
@@ -18,6 +46,10 @@ export const useInputState = () => {
         setButtonState(1);
     };
 
+    /**
+     * Обработчик отправки формы.
+     * @param {React.FormEvent} e - Событие отправки формы.
+     */
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setButtonState(3);
@@ -35,6 +67,9 @@ export const useInputState = () => {
         }, 2000);
     };
 
+    /**
+     * Очистка поля ввода и сброс состояния ошибки и состояния кнопки.
+     */
     const clearInput = () => {
         setInputValue("");
         setIsError(false);
@@ -45,7 +80,11 @@ export const useInputState = () => {
         setDisabled(isError);
     }, [isError]);
 
-    const getButtonIcon = () => {
+    /**
+     * Возвращает иконку в зависимости от состояния кнопки.
+     * @returns {string} - URL иконки.
+     */
+    const getButtonIcon = (): string => {
         switch (buttonState) {
             case 1:
                 return arrowIcon;

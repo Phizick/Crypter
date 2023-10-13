@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import {NEUTRAL_LIGHT, NEUTRAL_SNOWWHITE} from "../../Constants/Colors/Colors";
 
+/**
+ * @typedef {Object} CardProps - пропсы для компонента TopCreatorsCard.
+ * @property {string} avatar - путь к изображению аватара.
+ * @property {string} name - имя создателя.
+ * @property {number} amount - количество.
+ */
 interface CardProps {
     avatar: string;
     name: string;
@@ -58,8 +64,17 @@ const CardHeader = styled.div`
   
 `;
 
-const TopCreatorsCard: React.FC<CardProps> = ({ avatar, name, amount }) => {
+/**
+ * Компонент TopCreatorsCard.
+ * @param {CardProps} props - пропсы компонента TopCreatorsCard.
+ * @returns {JSX.Element} - возвращаемый React элемент.
+ */
+
+const TopCreatorsCard: React.FC<CardProps> = ({avatar, name, amount}: CardProps): JSX.Element => {
     const [isHovered, setIsHovered] = useState(false);
+    /**
+     * Обработчик события наведения курсора на карточку.
+     */
 
     const handleHover = () => {
         setIsHovered(!isHovered);

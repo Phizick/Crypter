@@ -1,3 +1,11 @@
+/**
+ * Компонент Feed представляет собой блок с информацией о товаре.
+ *
+ * @component
+ * @param {Props} props - Свойства компонента.
+ * @return {JSX.Element} - Возвращает разметку блока с информацией о товаре.
+ */
+
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Label from "../UI_components/Label/Label";
@@ -5,13 +13,13 @@ import Button from "../UI_components/Button/Button";
 import {TEXT_STYLES} from "../../Constants/Typography/Typography";
 
 type Props = {
-    size: 'big' | 'small';
-    imageURL: string;
-    title: string;
-    author: string;
-    authorAvatar: string;
-    price: string;
-    stock: string;
+    size: 'big' | 'small'; // размер фрейма. Может быть "big" или "small".
+    imageURL: string; // URL-адрес изображения
+    title: string; // заголовок фрейма
+    author: string; // автор фрейма
+    authorAvatar: string; // URL-адрес аватарки автора
+    price: string; // цена фрейма
+    stock: string; // кол-во
 };
 
 const StyledImage = styled.img<{ scale: boolean; size: 'big' | 'small' }>`
