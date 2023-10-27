@@ -37,7 +37,8 @@ import TopCreatorsSlider from "../TopCreatorsSlider/TopCreatorsSlider";
 import Feed from "../Feed/Feed";
 import CardItem from "../CardItem/CardItem";
 import CardLikeButton from "../UI_components/CardLikeButton/CardLikeButton";
-
+import HotCollection from "../HotCollection/HotCollection";
+import avatarMock from '../../Images/Avatars/avatar_6.png'
 
 
 // @ts-ignore
@@ -57,18 +58,7 @@ function App() {
     };
 
     const items = [
-        {
-            title: 'Заголовок 1',
-            content: 'Содержимое 1'
-        },
-        {
-            title: 'Заголовок 2',
-            content: 'Содержимое 2'
-        },
-        {
-            title: 'Заголовок 3',
-            content: 'Содержимое 3'
-        }
+        image1, image5, image3, image4
     ];
 
     const list = styled.div`
@@ -119,22 +109,22 @@ function App() {
 
     return (
        <>
-        <HeaderNav/>
-           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>
-        <Slider cards={1} cardContainer={1500} position={'auction'}>
-            {slides}
-        </Slider>
-           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>
+        {/*<HeaderNav/>*/}
+        {/*   <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>*/}
+        {/*<Slider cards={1} cardContainer={1500} position={'auction'}>*/}
+        {/*    {slides}*/}
+        {/*</Slider>*/}
+        {/*   <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>*/}
 
 
-               <Slider cards={5} position={'creators'} cardContainer={280}>
-                   {slidesSellers}
-               </Slider>
-           <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>
+        {/*       <Slider cards={5} position={'creators'} cardContainer={280}>*/}
+        {/*           {slidesSellers}*/}
+        {/*       </Slider>*/}
+        {/*   <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px', marginBottom: '150px'}}/>*/}
 
-           <Slider cards={4} position={'hotbid'} cardContainer={250}>
-               {slidesCards}
-           </Slider>
+        {/*   <Slider cards={4} position={'hotbid'} cardContainer={250}>*/}
+        {/*       {slidesCards}*/}
+        {/*   </Slider>*/}
 
            <div style={{marginLeft: "400px", display: 'flex', flexDirection: 'row', gap: '20px'}}>
            {/*    <Feed size={'big'} imageURL={image4} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
@@ -144,7 +134,7 @@ function App() {
            {/*    <CardItem imageUrl={image3} title={'any card'} authors={autors}/>*/}
            {/*    <CardItem imageUrl={image4} title={'any card'} authors={autors}/>*/}
            {/*    <CardItem imageUrl={image5} title={'any card'} authors={autors}/>*/}
-
+               <HotCollection images={items} title={'collections'} author={'frent frent'} avatar={avatarMock} itemsCount={items.length}/>
            </div>
 
         <Footer/>

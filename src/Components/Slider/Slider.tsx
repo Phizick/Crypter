@@ -128,29 +128,34 @@ const ArrowContainer = styled.div<{ position: 'left' | 'right' | 'center' | 'hot
   bottom: 20px;
   z-index: 5;
 
-  ${(props) => {
-    if (props.position === 'left') {
-      return css`
-        left: 250px;
-        top: 260px;        
-      `;
-    } else if (props.position === 'right') {
-      return css`
-        right: 250px;
-        top: 260px;
-      `;
-    } else if (props.position === 'center') {
-      return css`
-        left: 60%;
-        transform: translateX(-50%);
-      `;
-    } else if (props.position === 'hotbid') {
-        return css`    
-        left: 68%;
-          bottom: 480px;
-        transform: translateX(-50%);         
-      `;}
-  }};
+  ${(props) =>
+    props.position === 'left' &&
+    css`
+    left: 250px;
+    top: 260px;        
+  `};
+
+  ${(props) =>
+    props.position === 'right' &&
+    css`
+    right: 250px;
+    top: 260px;
+  `};
+
+  ${(props) =>
+    props.position === 'center' &&
+    css`
+    left: 60%;
+    transform: translateX(-50%);    
+  `};
+
+  ${(props) =>
+    props.position === 'hotbid' &&
+    css`
+    left: 68%;
+    bottom: 480px;
+    transform: translateX(-50%);         
+  `};
 
   @media (max-width: 920px) {
     justify-content: center;
@@ -159,11 +164,11 @@ const ArrowContainer = styled.div<{ position: 'left' | 'right' | 'center' | 'hot
     right: initial;
     ${(props) => props.position === 'center' && 'transform: none;'}
   }
-`;
+}`;
 
 
 
-const ArrowBlock = styled.div<{ position: 'auction' | 'creators' | 'hotbid'}>`
+const ArrowBlock = styled.div<{ position: 'auction' | 'creators' | 'hotbid' }>`
     position: relative;
 `;
 
