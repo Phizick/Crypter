@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                     <InputSingle placeholder='Enter your email' />
                 </Column>
             </FooterContent>
-            <FooterAbout>We use cookies for better service.</FooterAbout>
+            <FooterAbout>We use cookies for better service. Powered by Denis Kraev aka Phizick</FooterAbout>
         </FooterContainer>
     );
 }

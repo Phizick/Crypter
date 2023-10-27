@@ -52,7 +52,7 @@ const MetaInfo = styled.div`
 
 const AuthorInfo = styled.div`
   display: flex;
-  align-items: center;  
+  align-items: center;
   ${Object.entries(TEXT_STYLES.TEXT_CAPTION_BOLD).map(([key, value]) => `${key}: ${value};`).join('\n')}
 `;
 
@@ -77,7 +77,7 @@ const HotCollection: React.FC<GalleryProps> = ({ images, title, author, avatar, 
             <MetaInfo>
                 <AuthorInfo>
                     <Avatar src={avatar} width={40} height={40} />
-                    {author}
+                    By {author}
                 </AuthorInfo>
                 <Label color={'black'} state={'ghost'} payload={`${itemsCount} items`}/>
             </MetaInfo>

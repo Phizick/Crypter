@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
     PRIMARY_BLUE,
     NEUTRAL_GRAY,
-    NEUTRAL_DARKSNOW, NEUTRAL_WHITE, NEUTRAL_SNOWWHITE, NEUTRAL_LIGHTGRAY
+    NEUTRAL_DARKSNOW, NEUTRAL_WHITE, NEUTRAL_SNOWWHITE, NEUTRAL_LIGHTGRAY, NEUTRAL_BLACK
 } from '../../../Constants/Colors/Colors'
 import {TEXT_STYLES} from "../../../Constants/Typography/Typography";
 // @ts-ignore
@@ -28,8 +28,9 @@ const ButtonWrapper = styled.button<IButtonProps>`
   justify-content: center;
   display: flex;
   align-items: center;  
-  transition: filter .5s;
-  width: 100%;  
+  transition: all .5s;
+  width: fit-content;
+  white-space: nowrap;
   cursor: pointer;
   gap: 12px;
   margin: 0;
@@ -37,7 +38,7 @@ const ButtonWrapper = styled.button<IButtonProps>`
   &.dark {
     background-color: transparent;
     border: 2px solid ${NEUTRAL_LIGHTGRAY};
-    color: ${NEUTRAL_SNOWWHITE};
+    color: ${NEUTRAL_BLACK};
     
     &.disabled {
       background-color: ${NEUTRAL_SNOWWHITE};
@@ -71,12 +72,20 @@ const ButtonWrapper = styled.button<IButtonProps>`
     background-color: ${PRIMARY_BLUE};
     border: none;
     color: ${NEUTRAL_SNOWWHITE};
+
+    &:hover {
+      background-color: ${NEUTRAL_SNOWWHITE};
+      color: ${NEUTRAL_GRAY};
+    }
     
     &.dark {
       background-color: transparent;
       border: 2px solid ${NEUTRAL_LIGHTGRAY};
       color: ${NEUTRAL_SNOWWHITE};
     }
+    
+   
+
   }
   
   &.light {

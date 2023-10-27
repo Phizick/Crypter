@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import Label from "../UI_components/Label/Label";
 import Button from "../UI_components/Button/Button";
 import {TEXT_STYLES} from "../../Constants/Typography/Typography";
+import {NEUTRAL_LIGHTGRAY} from "../../Constants/Colors/Colors";
 
 type Props = {
     size: 'big' | 'small'; // размер фрейма. Может быть "big" или "small".
@@ -46,6 +47,11 @@ const StyledInfo = styled.div<{ size: 'big' | 'small' }>`
   flex-flow: ${props => (props.size === 'big' ? 'row wrap' : 'column nowrap')};
   //align-items: center;
   margin-left: ${props => (props.size === 'big' ? '0' : '20px')};
+  gap: 9px;
+
+  & > :last-child {
+    margin-top: 15px;
+  }
 `;
 
 
@@ -89,6 +95,13 @@ const ArticleContainer = styled.div`
   margin-top: 24px;
 `;
 
+const StockCount = styled.p`
+    margin: 0;
+  ${Object.entries(TEXT_STYLES.TEXT_CAPTION).map(([key, value]) => `${key}: ${value};`).join('\n')};
+  color: ${NEUTRAL_LIGHTGRAY};
+
+`;
+
 const Feed: React.FC<Props> = ({
                                    size,
                                    imageURL,
@@ -126,7 +139,7 @@ const Feed: React.FC<Props> = ({
                         <LabelContainer>
                             <AuthorAvatar src={authorAvatar} alt={author} size={size}/>
                             <Label color={'green'} state={'ghost'} payload={price}/>
-                            <p>{stock}</p>
+                            <StockCount>{stock}</StockCount>
                         </LabelContainer>
                         <Button label={'Place a bid'} property={'light'} size={'small'} state={'enabled'} theme={'white'}/>
                     </StyledInfo>
