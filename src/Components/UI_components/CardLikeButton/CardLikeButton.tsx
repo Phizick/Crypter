@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+// @ts-ignore
 import likeIconDefault from '../../../Images/Icons/card_like_image.png'
+// @ts-ignore
 import likeIconActive from '../../../Images/Icons/card_like_image_active.png'
 import {NEUTRAL_SNOWWHITE} from "../../../Constants/Colors/Colors";
 

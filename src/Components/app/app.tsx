@@ -39,6 +39,8 @@ import avatarMock from '../../Images/Avatars/avatar_6.png'
 import PreFooter from "../PreFooter/PreFooter";
 import cubesImg from '../../Images/Logo/cubes.png'
 import FeedGallery from "../FeedGallery/FeedGallery";
+import TabSwitcher from "../UI_components/TabSwitcher/TabSwitcher";
+import InfoBlock from "../UserProfileInfo/UserProfileInfo";
 
 
 // @ts-ignore
@@ -107,6 +109,13 @@ function App() {
         <CardItem imageUrl={image4} title={'any card'} authors={autors}/>,
     ]
 
+    const tabs = [
+        "On Sale",
+        "Collectibles",
+        "Created",
+        "Likes"
+    ]
+
     return (
        <>
         <HeaderNav/>
@@ -128,10 +137,10 @@ function App() {
 
            <div style={{marginLeft: "400px"}}>
                <FeedGallery/>
-           {/*    <Feed size={'big'} imageURL={image4} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
-           {/*<Feed size={'small'} imageURL={image1} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
-           {/*    <Feed size={'small'} imageURL={image5} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>*/}
-           {/*    <Feed size={'small'} imageURL={image3} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 12'}/>*/}
+               <Feed size={'big'} imageURL={image4} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
+           <Feed size={'small'} imageURL={image1} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
+               <Feed size={'small'} imageURL={image5} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 3'}/>
+               <Feed size={'small'} imageURL={image3} title={'One image'} author={'ruby robinson'} authorAvatar={avatarTest} price={'1000 ETH'} stock={'1 of 12'}/>
                <div style={{marginLeft: "100px", display: 'flex', flexDirection: 'row', gap: '20px'}}>
                <CardItem imageUrl={image3} title={'any card'} authors={autors}/>
                <CardItem imageUrl={image4} title={'any card'} authors={autors}/>
@@ -143,6 +152,8 @@ function App() {
                    <HotCollection images={items} title={'collections'} author={'frent frent'} avatar={avatarMock} itemsCount={items.length}/>
                </div>
            </div>
+           <TabSwitcher tabs={tabs}/>
+           <InfoBlock avatar={avatarTest} name={'Roger Boen'} profileInformation={"lorem ipsolum bla bl bla"} registrationDate={'Member since Mar 15, 2021'}/>
            <PreFooter imageUrl={cubesImg} largeText={'Earn free crypto with Crypter'}
                        mediumText={'Save your time with Stacks'} smallText={'A creative agency that lead and inspire'}/>
 

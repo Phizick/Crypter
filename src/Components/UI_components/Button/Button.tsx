@@ -29,7 +29,8 @@ const ButtonWrapper = styled.button<IButtonProps>`
   display: flex;
   align-items: center;  
   transition: all .5s;
-  width: fit-content;
+  min-width: fit-content;
+  max-width: 100%;
   white-space: nowrap;
   cursor: pointer;
   gap: 12px;

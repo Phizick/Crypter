@@ -9,7 +9,6 @@ import { TEXT_STYLES } from '../Constants/Typography/Typography';
 import {render} from "@testing-library/react";
 
 
-
 const Label = styled.div`
 display: flex;
 justify-content: center;
